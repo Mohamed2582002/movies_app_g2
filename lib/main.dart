@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app_g2/forget_password_screen.dart';
+import 'package:movies_app_g2/auth/register_screen/register_screen.dart';
 import 'package:movies_app_g2/home_screen.dart';
 
 void main() {
@@ -14,8 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: ForgetPasswordScreen.routeName,
+      initialRoute: HomeScreen.routeName,
       routes: {
+        HomeScreen.routeName: (context) => HomeScreen(),
+        RegisterScreen.routeName: (context) => RegisterScreen(),
         ForgetPasswordScreen.routeName: (context) => ForgetPasswordScreen(),
       },
       themeMode: ThemeMode.dark,

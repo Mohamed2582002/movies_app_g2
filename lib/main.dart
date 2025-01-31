@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'package:movies_app_g2/forget_password_screen.dart';
 import 'package:movies/onboardingScreen/intrduction1.dart';
 import 'home_screen.dart';
 import 'onboardingScreen/intrduction3.dart';
@@ -7,6 +9,7 @@ import 'onboardingScreen/introduction4.dart';
 import 'onboardingScreen/introduction5.dart';
 import 'onboardingScreen/introduction6.dart';
 import 'package:movies_app_g2/auth/register_screen/register_screen.dart';
+
 import 'package:movies_app_g2/home_screen.dart';
 import 'package:movies_app_g2/ui/login_Screen.dart';
 
@@ -22,6 +25,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+
+      initialRoute: ForgetPasswordScreen.routeName,
+      routes: {
+        ForgetPasswordScreen.routeName: (context) => ForgetPasswordScreen(),
+      },
+
       initialRoute: introduction1.routeName,
       routes: {
         introduction1.routeName: (context) => introduction1(),
@@ -34,6 +43,7 @@ class MyApp extends StatelessWidget {
         RegisterScreen.routeName: (context) => RegisterScreen(),
         LoginScreen.routeName: (context) => LoginScreen(),
    
+
       themeMode: ThemeMode.dark,
     );
   }

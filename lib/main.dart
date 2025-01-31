@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app_g2/auth/register_screen/register_screen.dart';
 import 'package:movies_app_g2/home_screen.dart';
 import 'package:movies_app_g2/ui/login_Screen.dart';
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         LoginScreen.routeName: (context) => LoginScreen(),
         HomeScreen.routeName: (context) => HomeScreen(),
+        RegisterScreen.routeName: (context) => RegisterScreen(),
       },
       themeMode: ThemeMode.dark,
     );

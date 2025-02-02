@@ -2,6 +2,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../../ui/login_Screen.dart';
+
 class RegisterScreen extends StatelessWidget {
   static const String routeName = 'register_screen';
   final List<String> avatar = [
@@ -279,7 +281,7 @@ class RegisterScreen extends StatelessWidget {
                       text: '?login',
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
-                          // Navigator.of(context).pushReplacementNamed(LoginScreen.routeName) ;
+                          Navigator.of(context).pushReplacementNamed(LoginScreen.routeName) ;
                         },
                       style: TextStyle(
                           color: Color(0xffF6BD00),

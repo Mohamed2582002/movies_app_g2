@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../Utils/AppColor.dart';
 
-import '../../utils/app_colors.dart';
+
 typedef MyValidator = String? Function(String?)? ;
 
 class CustomTextField extends StatelessWidget {

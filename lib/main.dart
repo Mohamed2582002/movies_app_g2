@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-import 'package:movies_app_g2/forget_password_screen.dart';
 import 'package:movies/onboardingScreen/intrduction1.dart';
+import 'auth/register_screen/register_screen.dart';
+import 'ui/forget_password_screen.dart';
 import 'home_screen.dart';
+import 'onboardingScreen/intrduction1.dart';
 import 'onboardingScreen/intrduction3.dart';
 import 'onboardingScreen/introduction2.dart';
 import 'onboardingScreen/introduction4.dart';
 import 'onboardingScreen/introduction5.dart';
 import 'onboardingScreen/introduction6.dart';
-import 'package:movies_app_g2/auth/register_screen/register_screen.dart';
 
-import 'package:movies_app_g2/home_screen.dart';
-import 'package:movies_app_g2/ui/login_Screen.dart';
+import 'ui/login_Screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,10 +26,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      initialRoute: ForgetPasswordScreen.routeName,
-      routes: {
-        ForgetPasswordScreen.routeName: (context) => ForgetPasswordScreen(),
-      },
+
 
       initialRoute: introduction1.routeName,
       routes: {
@@ -39,12 +36,11 @@ class MyApp extends StatelessWidget {
         Intrduction4.routeName: (context) => Intrduction4(),
         Introduction5.routeName: (context) => Introduction5(),
         Intrduction6.routeName: (context) => Intrduction6(),
-        HomeScreen.routeName:(context)=>HomeScreen(),
+        HomeScreen.routeName: (context) => HomeScreen(),
         RegisterScreen.routeName: (context) => RegisterScreen(),
         LoginScreen.routeName: (context) => LoginScreen(),
-   
+        ForgetPasswordScreen.routeName: (context) => ForgetPasswordScreen(),
 
-      themeMode: ThemeMode.dark,
-    );
+      });
   }
 }

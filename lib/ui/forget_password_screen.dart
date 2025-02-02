@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app_g2/ui/widget/custom_Elevated_Button.dart';
+import 'package:movies/ui/login_Screen.dart';
+import 'package:movies/ui/widget/custom_Elevated_Button.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
   static const String routeName = 'forget_password';
@@ -12,7 +13,10 @@ class ForgetPasswordScreen extends StatelessWidget {
         backgroundColor: Color(0xFF121312),
         title: Text('Forget Password',style: TextStyle(color: Color(0xFFFFBB3B)),),
         centerTitle: true,
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back,color:Color(0xFFFFBB3B) ,)),
+        leading: IconButton(onPressed: (){
+          Navigator.of(context).pushReplacementNamed(LoginScreen.routeName) ;
+
+        }, icon: Icon(Icons.arrow_back,color:Color(0xFFFFBB3B) ,)),
       ),
       body: Column(
         children: [

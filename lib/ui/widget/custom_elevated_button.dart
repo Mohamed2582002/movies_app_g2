@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:movies/Utils/AppColor.dart';
 
-import '../../utils/app_colors.dart';
 
 
 class CustomElevatedButton extends StatelessWidget {
@@ -13,7 +13,7 @@ class CustomElevatedButton extends StatelessWidget {
     var width =MediaQuery.of(context).size.width;
     var height =MediaQuery.of(context).size.height;
     return ElevatedButton(style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.yellowColor,
+        backgroundColor: AppColors.YellowColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),

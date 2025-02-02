@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:movies/Utils/AppAssets.dart';
 import 'package:movies/Utils/AppColor.dart';
 import 'package:movies/Utils/AppStyle.dart';
-import 'package:movies/home_screen.dart';
 import 'package:movies/onboardingScreen/introduction5.dart';
-
+import '../ui/login_Screen.dart';
 class Intrduction6 extends StatelessWidget {
   static const String routeName = "introduction6";
 
@@ -44,7 +43,7 @@ class Intrduction6 extends StatelessWidget {
                   ElevatedButton(
                       onPressed: () {
                         Navigator.pushReplacementNamed(
-                            context, HomeScreen.routeName);
+                            context, LoginScreen.routeName);
                       },
                       style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.YellowColor,

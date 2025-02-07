@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movies/Utils/my_theme_data.dart';
 
 import 'package:movies/onboardingScreen/intrduction1.dart';
+import 'package:movies/ui/profile/update_profile.dart';
 import 'auth/register_screen/register_screen.dart';
 import 'ui/forget_password_screen.dart';
 import 'home_screen.dart';
@@ -25,21 +26,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-
-
-
+      initialRoute: UpdateProfile.routeName,
       initialRoute: HomeScreen.routeName,
       routes: {
-        introduction1.routeName: (context) => introduction1(),
-        Introduction2.routeName: (context) => Introduction2(),
-        Intrduction3.routeName: (context) => Intrduction3(),
-        Intrduction4.routeName: (context) => Intrduction4(),
-        Introduction5.routeName: (context) => Introduction5(),
-        Intrduction6.routeName: (context) => Intrduction6(),
-        HomeScreen.routeName: (context) => HomeScreen(),
-        RegisterScreen.routeName: (context) => RegisterScreen(),
-        LoginScreen.routeName: (context) => LoginScreen(),
-        ForgetPasswordScreen.routeName: (context) => ForgetPasswordScreen(),
+
+        UpdateProfile.routeName: (context) => UpdateProfile(),
 
       }
       ,darkTheme:MyThemeData.darkTheme,

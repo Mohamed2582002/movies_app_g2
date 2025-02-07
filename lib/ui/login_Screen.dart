@@ -77,6 +77,54 @@ class _LoginScreenState extends State<LoginScreen> {
                             return "Password field is required";
                           }
 
+
+                }, child: Text(textAlign:TextAlign.end ,
+                  "Forget Password ?",
+                  style:TextStyle(color: AppColors.YellowColor,
+                  fontSize: 14) ,)),
+              ),
+            SizedBox(height: height*0.02,),
+                  CustomElevatedButton(text: 'Login',colored: AppColors.YellowColor, textStyle: AppColors.blackColor),
+            SizedBox(height: height*0.02,),
+              InkWell(
+                onTap: (){
+                  Navigator.pushReplacementNamed(
+                      context, RegisterScreen.routeName);
+                },
+                child: Text.rich(TextSpan(
+                  children: [
+                    TextSpan(text: "Don’t Have Account ? ",style: TextStyle(color: AppColors.whiteColor)),
+                    TextSpan(text: "Create One ",style: TextStyle(color: AppColors.YellowColor)),
+                ])),
+              ),
+              SizedBox(height: height*0.02,),
+              Row(children: [
+                Expanded(
+                  child: Divider(
+                    thickness: 2,
+                    color: AppColors.YellowColor,
+                    endIndent:10,
+                    indent: 40,
+                  ),
+                ),
+                Text("OR",style: TextStyle(color: AppColors.YellowColor,fontSize:15 ),),
+                Expanded(
+                  child: Divider(
+                    thickness: 2,
+                    color: AppColors.YellowColor,
+                    endIndent: 40,
+                    indent: 10,
+                  ),
+                ),
+              ],),
+              SizedBox(height: height*0.02,),
+              CustomElevatedButton(
+                  icon: ImageIcon(AssetImage(AppAssets.googleImage),color: AppColors.blackColor,),
+                  text: " Login With Google",colored: AppColors.YellowColor, textStyle: AppColors.blackColor),
+              SizedBox(height: height*0.02,),
+              Container(decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(color: AppColors.YellowColor,width: 2)
                         },
                         controller: cubit.passwordController,
                         color: AppColors.whiteColor,

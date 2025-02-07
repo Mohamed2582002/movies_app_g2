@@ -6,14 +6,16 @@ import 'package:movies/Utils/AppColor.dart';
 class CustomElevatedButton extends StatelessWidget {
   String text ;
   Widget? icon;
-  CustomElevatedButton ({required this.text ,this.icon});
+  Color colored;
+  Color textStyle;
+  CustomElevatedButton ({required this.text ,this.icon, required this.colored,required this.textStyle});
 
   @override
   Widget build(BuildContext context) {
     var width =MediaQuery.of(context).size.width;
     var height =MediaQuery.of(context).size.height;
     return ElevatedButton(style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.YellowColor,
+        backgroundColor: colored,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
@@ -24,7 +26,7 @@ class CustomElevatedButton extends StatelessWidget {
     ), onPressed:(){} ,
       child: Row(mainAxisAlignment: MainAxisAlignment.center,
         children: [icon ?? SizedBox(),
-          Text(text,style: TextStyle(color: AppColors.blackColor,fontSize: 16
+          Text(text,style: TextStyle(color: textStyle,fontSize: 16
               ,fontWeight: FontWeight.w400
           )
           ),

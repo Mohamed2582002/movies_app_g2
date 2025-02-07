@@ -50,7 +50,7 @@ class LoginScreen extends StatelessWidget {
                   fontSize: 14) ,)),
               ),
             SizedBox(height: height*0.02,),
-                  CustomElevatedButton(text: 'Login'),
+                  CustomElevatedButton(text: 'Login',colored: AppColors.YellowColor, textStyle: AppColors.blackColor),
             SizedBox(height: height*0.02,),
               InkWell(
                 onTap: (){
@@ -86,7 +86,7 @@ class LoginScreen extends StatelessWidget {
               SizedBox(height: height*0.02,),
               CustomElevatedButton(
                   icon: ImageIcon(AssetImage(AppAssets.googleImage),color: AppColors.blackColor,),
-                  text: " Login With Google"),
+                  text: " Login With Google",colored: AppColors.YellowColor, textStyle: AppColors.blackColor),
               SizedBox(height: height*0.02,),
               Container(decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),

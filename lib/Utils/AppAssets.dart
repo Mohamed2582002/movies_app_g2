@@ -12,5 +12,13 @@ class AppAssets{
   static const String googleImage = "assets/images/google_Icon.png";
   static const String arabicImage = "assets/images/arabic_Icon.png";
   static const String englishImage = "assets/images/english_Icon.png";
+  static const String homeIcon = "assets/images/homeIcon.png";
+  static const String searchIcon = "assets/images/searchIcon.png";
+  static const String ProfileIcon = "assets/images/ProfileIcon.png";
+  static const String browseIcon = "assets/images/browseIcon.png";
+
+
+
+
 
 }

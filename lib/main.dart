@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies/Utils/my_theme_data.dart';
 
 import 'package:movies/onboardingScreen/intrduction1.dart';
 import 'package:movies/ui/profile/update_profile.dart';
@@ -11,7 +12,6 @@ import 'onboardingScreen/introduction2.dart';
 import 'onboardingScreen/introduction4.dart';
 import 'onboardingScreen/introduction5.dart';
 import 'onboardingScreen/introduction6.dart';
-
 import 'ui/login_Screen.dart';
 
 void main() {
@@ -26,14 +26,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-
-
-
       initialRoute: UpdateProfile.routeName,
+      initialRoute: HomeScreen.routeName,
       routes: {
 
         UpdateProfile.routeName: (context) => UpdateProfile(),
 
-      });
+      }
+      ,darkTheme:MyThemeData.darkTheme,
+      themeMode:ThemeMode.light ,
+      );
   }
 }

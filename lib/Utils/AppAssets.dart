@@ -21,4 +21,10 @@ class AppAssets{
   static const String person7 = "assets/images/person7.png";
   static const String person8 = "assets/images/person8.png";
   static const String person9 = "assets/images/person9.png";
+  static const String homeIcon = "assets/images/homeIcon.png";
+  static const String searchIcon = "assets/images/searchIcon.png";
+  static const String ProfileIcon = "assets/images/ProfileIcon.png";
+  static const String browseIcon = "assets/images/browseIcon.png";
+
+
 }

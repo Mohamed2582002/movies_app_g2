@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies/Utils/my_theme_data.dart';
 
 import 'package:movies/onboardingScreen/intrduction1.dart';
 import 'auth/register_screen/register_screen.dart';
@@ -10,7 +11,6 @@ import 'onboardingScreen/introduction2.dart';
 import 'onboardingScreen/introduction4.dart';
 import 'onboardingScreen/introduction5.dart';
 import 'onboardingScreen/introduction6.dart';
-
 import 'ui/login_Screen.dart';
 
 void main() {
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
 
 
 
-      initialRoute: introduction1.routeName,
+      initialRoute: HomeScreen.routeName,
       routes: {
         introduction1.routeName: (context) => introduction1(),
         Introduction2.routeName: (context) => Introduction2(),
@@ -41,6 +41,9 @@ class MyApp extends StatelessWidget {
         LoginScreen.routeName: (context) => LoginScreen(),
         ForgetPasswordScreen.routeName: (context) => ForgetPasswordScreen(),
 
-      });
+      }
+      ,darkTheme:MyThemeData.darkTheme,
+      themeMode:ThemeMode.light ,
+      );
   }
 }

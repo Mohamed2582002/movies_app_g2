@@ -58,7 +58,6 @@ class ForgetPasswordScreen extends StatelessWidget {
               ],
             ),
           ),*/
-CustomElevatedButton(text: 'Verify Email')
         ],
       ),
     );

@@ -16,11 +16,13 @@ class CustomTextField extends StatelessWidget {
   Widget? suffixIcon ;
   bool obscureText ;
   int? maxLines ;
-  MyValidator validator ; //Add a TextFormField with validation logic
+  String? Function(String?)? validator;
+  //Add a TextFormField with validation logic
   TextEditingController? controller ;
   TextInputType? keyboardType ;
 
   CustomTextField({
+    this.validator,
     this.color,
     this.keyboardType= TextInputType.text,
     this.borderColor,
@@ -32,7 +34,6 @@ class CustomTextField extends StatelessWidget {
     this.suffixIcon,
     this.obscureText =false ,
     this.maxLines,
-    this.validator ,
     this.controller ,
 
   });
@@ -41,8 +42,8 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       style: TextStyle(color: AppColors.whiteColor),
+      validator: validator,
       keyboardType: keyboardType,
-      validator: validator, // Add a TextFormField with validation logic
       controller: controller,
       maxLines: maxLines ?? 1,
       obscureText: obscureText,

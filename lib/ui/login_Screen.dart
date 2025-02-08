@@ -317,7 +317,8 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: height * 0.02,),
                 CustomElevatedButton(
                   text: 'Login',
-                  colored: AppColors.YellowColor,),
+                  colored: AppColors.YellowColor,
+                ),
                 SizedBox(height: height * 0.02,),
                 InkWell(
                   onTap: () {

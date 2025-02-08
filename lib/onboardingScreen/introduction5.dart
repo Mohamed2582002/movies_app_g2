@@ -52,7 +52,7 @@ class Introduction5 extends StatelessWidget {
                   ElevatedButton(
                       onPressed: () {
                         Navigator.pushReplacementNamed(
-                            context, Intrduction6.routeName);
+                            context, Introduction6.routeName);
                       },
                       style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.YellowColor,
@@ -70,7 +70,7 @@ class Introduction5 extends StatelessWidget {
                   ElevatedButton(
                       onPressed: () {
                         Navigator.pushReplacementNamed(
-                            context, Intrduction4.routeName);
+                            context, Introduction4.routeName);
                       },
                       style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.blackColor,

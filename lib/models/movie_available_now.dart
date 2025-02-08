@@ -10,7 +10,6 @@ class Movie {
     statusMessage = json['status_message'];
     data = json['data'] != null ? Data.fromJson(json['data']) : null;
   }
-
   String? status;
   String? statusMessage;
   Data? data;
@@ -45,7 +44,6 @@ class Data {
       });
     }
   }
-
   int? movieCount;
   int? limit;
   int? pageNumber;
@@ -126,7 +124,6 @@ class Movies {
     dateUploaded = json['date_uploaded'];
     dateUploadedUnix = json['date_uploaded_unix'];
   }
-
   int? id;
   String? url;
   String? imdbCode;
@@ -256,4 +253,5 @@ class Torrents {
     map['date_uploaded_unix'] = dateUploadedUnix;
     return map;
   }
+
 }

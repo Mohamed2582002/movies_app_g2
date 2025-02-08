@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies/Utils/AppColor.dart';
+import 'package:movies/api/api_manager.dart';
 import 'package:movies/bottomNavigationBar/home/movies_silder.dart';
 import 'package:movies/bottomNavigationBar/home/trending_silder.dart';
 
@@ -11,13 +12,13 @@ class HomeTabs extends StatefulWidget {
 }
 
 class _HomeTabsState extends State<HomeTabs> {
-  // late Future<List<Movie>> trendingMovies ;
-  //
-  //  @override
-  //  void initState (){
-  //    super.initState ();
-  //    trendingMovies = Api().getTrendingMovies() ;
-  //  }
+  late Future<List<dynamic>> movies;
+
+  @override
+  void initState() {
+    super.initState();
+    movies = apiManager().fetchMovies();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +38,20 @@ class _HomeTabsState extends State<HomeTabs> {
                       Center(
                           child:
                               Image.asset('assets/images/Available Now.png')),
-                      TrendingSilder(),
+                      FutureBuilder<List<dynamic>>(
+                          future: movies,
+                          builder: (context, snapshot) {
+                            if (snapshot.hasError) {
+                              return Center(
+                                  child: Text(snapshot.error.toString()));
+                            } else if (snapshot.hasData) {
+                              return TrendingSilder();
+                            } else {
+                              return Center(
+                                child: CircularProgressIndicator(),
+                              );
+                            }
+                          }),
                       Center(child: Image.asset('assets/images/Watch Now.png')),
                       SizedBox(
                         height: 3,

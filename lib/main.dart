@@ -8,6 +8,7 @@ import 'package:movies/onboardingScreen/introduction2.dart';
 import 'package:movies/onboardingScreen/introduction4.dart';
 import 'package:movies/onboardingScreen/introduction5.dart';
 import 'package:movies/onboardingScreen/introduction6.dart';
+import 'package:movies/ui/details_screen/cast_details.dart';
 import 'package:movies/ui/login_Screen.dart';
 import 'package:movies/ui/profile/update_profile.dart';
 
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         Introduction5.routeName: (context) => Introduction5(),
         Introduction6.routeName: (context) => Introduction6(),
         HomeScreen.routeName: (context) => HomeScreen(),
+        CastDetails.routeName: (context) => CastDetails(),
       }
       ,darkTheme:MyThemeData.darkTheme,
       themeMode:ThemeMode.light ,

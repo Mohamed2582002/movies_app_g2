@@ -9,6 +9,7 @@ import 'package:movies/onboardingScreen/introduction4.dart';
 import 'package:movies/onboardingScreen/introduction5.dart';
 import 'package:movies/onboardingScreen/introduction6.dart';
 import 'package:movies/ui/details_screen/cast_details.dart';
+import 'package:movies/ui/details_screen/similar_Movies.dart';
 import 'package:movies/ui/login_Screen.dart';
 import 'package:movies/ui/profile/update_profile.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: HomeScreen.routeName,
+      initialRoute: SimilarMovies.routeName,
       routes: {
         LoginScreen.routeName: (context) => LoginScreen(),
         UpdateProfile.routeName: (context) => UpdateProfile(),
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         Introduction6.routeName: (context) => Introduction6(),
         HomeScreen.routeName: (context) => HomeScreen(),
         CastDetails.routeName: (context) => CastDetails(),
+        SimilarMovies.routeName: (context) => SimilarMovies(),
       }
       ,darkTheme:MyThemeData.darkTheme,
       themeMode:ThemeMode.light ,

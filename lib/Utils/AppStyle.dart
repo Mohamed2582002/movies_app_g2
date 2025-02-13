@@ -8,6 +8,8 @@ class Appstyle {
       fontSize: 28, fontWeight: FontWeight.w500, color: AppColors.whiteColor);
   static TextStyle medium24White = GoogleFonts.inter(
       fontSize: 24, fontWeight: FontWeight.w500, color: AppColors.whiteColor);
+  static TextStyle bold24White = GoogleFonts.inter(
+      fontSize: 24, fontWeight: FontWeight.bold, color: AppColors.whiteColor);
 
   static TextStyle medium16White = GoogleFonts.inter(
       fontSize: 16,

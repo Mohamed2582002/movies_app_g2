@@ -74,7 +74,7 @@ class _HomeTabsState extends State<HomeTabs> {
                           ),
                         ],
                       ),
-                      MoviesSilder(),
+                      MoviesSlider(),
                       SizedBox(
                         height: 5,
                       ),
@@ -96,7 +96,7 @@ class _HomeTabsState extends State<HomeTabs> {
                           ),
                         ],
                       ),
-                      MoviesSilder(),
+                      MoviesSlider(),
                       SizedBox(
                         height: 5,
                       ),
@@ -118,7 +118,7 @@ class _HomeTabsState extends State<HomeTabs> {
                           ),
                         ],
                       ),
-                      MoviesSilder(),
+                      MoviesSlider(),
                     ],
                   ),
                 ),

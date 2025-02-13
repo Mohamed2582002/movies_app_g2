@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movies/Utils/AppColor.dart';
 
-class MoviesSilder extends StatelessWidget {
-  MoviesSilder({super.key});
+class MoviesSlider extends StatelessWidget {
+  MoviesSlider({super.key});
 
   @override
   Widget build(BuildContext context) {

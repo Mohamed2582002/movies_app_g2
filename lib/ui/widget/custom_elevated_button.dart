@@ -32,36 +32,10 @@ class CustomElevatedButton extends StatelessWidget {
           ),
         ]
 
-      ) ;
+      )) ;
 
 
-        return ElevatedButton(
-        style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.YellowColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
-        padding: EdgeInsets.symmetric(
-          vertical: height * 0.015,
-          horizontal: width * 0.02,
-        )),
-    child: Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-    icon ?? SizedBox(),
-    Text(text,
-    style: TextStyle(
-    color: AppColors.blackColor,
-    fontSize: 16,
-    fontWeight: FontWeight.w400)),
-        ],
-      ),
-    onPressed:
-    onPressed
 
-    );
-  }
 
-  );
   }
 }

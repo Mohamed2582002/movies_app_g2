@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies/Utils/my_theme_data.dart';
+import 'package:movies/ui/movie_details/details1.dart';
 import 'package:movies/ui/profile/update_profile.dart';
 
 void main() {
@@ -14,10 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: UpdateProfile.routeName,
+      initialRoute: Details1.routeName,
       routes: {
 
-        UpdateProfile.routeName: (context) => UpdateProfile(),
+        Details1.routeName: (context) => Details1(),
 
       }
       ,darkTheme:MyThemeData.darkTheme,

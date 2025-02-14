@@ -25,6 +25,15 @@ class AppAssets{
   static const String searchIcon = "assets/images/searchIcon.png";
   static const String ProfileIcon = "assets/images/ProfileIcon.png";
   static const String browseIcon = "assets/images/browseIcon.png";
+  static const String detailsBgd = "assets/images/dr_strange.png";
+  static const String playButton = "assets/images/play_button.png";
+  static const String screenShot1 = "assets/images/screen_shot1.png";
+  static const String screenShot2 = "assets/images/screen_shot2.png";
+  static const String screenShot3 = "assets/images/screen_shot3.png";
+  static const String heartIcon = "assets/images/heart_icon.png";
+
+
+
 
 
 }

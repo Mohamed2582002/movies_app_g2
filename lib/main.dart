@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies/Utils/my_theme_data.dart';
+import 'package:movies/home_screen.dart';
 import 'package:movies/ui/movie_details/details1.dart';
 import 'package:movies/ui/profile/update_profile.dart';
 
@@ -15,10 +16,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: Details1.routeName,
+      initialRoute: HomeScreen.routeName,
       routes: {
 
-        Details1.routeName: (context) => Details1(),
+        HomeScreen.routeName: (context) => HomeScreen(),
 
       }
       ,darkTheme:MyThemeData.darkTheme,

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:movies/Utils/AppColor.dart';
 
-class MoviesSilder extends StatelessWidget {
-  MoviesSilder({super.key});
+class MoviesSlider extends StatelessWidget {
+  // MoviesSlider({super.key ,required this.movies});
+  // Movies movies ;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class MoviesSilder extends StatelessWidget {
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           physics: BouncingScrollPhysics(),
-          itemCount: 10,
+          itemCount: 100,
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.all(10),
@@ -22,9 +23,7 @@ class MoviesSilder extends StatelessWidget {
                   borderRadius: BorderRadius.circular(16),
                   image: const DecorationImage(
                     fit: BoxFit.cover,
-                    image: AssetImage(
-                      'assets/images/OnBoarding2.png',
-                    ),
+                    image: NetworkImage(''),
                   ),
                 ),
                 width: 145,

@@ -5,8 +5,8 @@ import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:movies/auth/register_screen/Cubit/auth_states.dart';
 
-class AuthCubit extends Cubit<AuthStates> {
-  AuthCubit() : super(AuthInitialState());
+class AuthCubits extends Cubit<AuthStates> {
+  AuthCubits() : super(AuthInitialState());
 
   // register http
   void register({

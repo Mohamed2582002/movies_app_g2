@@ -72,11 +72,21 @@ class _UpdateProfileState extends State<UpdateProfile> {
               SizedBox(
                 height: 250,
               ),
-              CustomElevatedButton(text: 'Delete Account',colored: AppColors.redColor,textStyle: AppColors.whiteColor,),
+              CustomElevatedButton(
+                text: 'Delete Account',
+                colored: AppColors.redColor,
+                textStyle: AppColors.whiteColor,
+                onPressed: () {},
+              ),
               SizedBox(
                 height: 20,
               ),
-              CustomElevatedButton(text: 'Update Data', colored: AppColors.YellowColor,textStyle: AppColors.blackColor,)
+              CustomElevatedButton(
+                text: 'Update Data',
+                colored: AppColors.YellowColor,
+                textStyle: AppColors.blackColor,
+                onPressed: () {},
+              )
             ],
           ),
         ),

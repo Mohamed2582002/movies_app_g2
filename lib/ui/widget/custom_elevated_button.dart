@@ -7,7 +7,11 @@ class CustomElevatedButton extends StatelessWidget {
   Color? textStyle;
 
   CustomElevatedButton(
-      {required this.text, this.icon, this.colored, this.textStyle});
+      {required this.text,
+      this.icon,
+      this.colored,
+      this.textStyle,
+      required Null Function() onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -23,23 +27,13 @@ class CustomElevatedButton extends StatelessWidget {
               horizontal: width * 0.02,
             )),
         onPressed: () {},
-        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [icon ?? SizedBox(),
+        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          icon ?? SizedBox(),
           Text(
             text,
             style: TextStyle(
                 color: textStyle, fontSize: 16, fontWeight: FontWeight.w400),
           ),
-
-
-          ),
-        ]
-
-      )) ;
-
-
-
-
-
         ]));
   }
 }

@@ -23,8 +23,7 @@ class CustomElevatedButton extends StatelessWidget {
               horizontal: width * 0.02,
             )),
         onPressed: () {},
-        child: Row(mainAxisAlignment: MainAxisAlignment.center,
-        children: [icon ?? SizedBox(),
+        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [icon ?? SizedBox(),
           Text(
             text,
             style: TextStyle(

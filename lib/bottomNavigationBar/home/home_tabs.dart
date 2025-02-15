@@ -3,6 +3,7 @@ import 'package:movies/Utils/AppColor.dart';
 import 'package:movies/api/api_manager.dart';
 import 'package:movies/bottomNavigationBar/home/movies_silder.dart';
 import 'package:movies/bottomNavigationBar/home/trending_silder.dart';
+import 'package:movies/models/genera_response.dart';
 
 class HomeTabs extends StatefulWidget {
   static const String routeName = 'home_screen';
@@ -12,13 +13,6 @@ class HomeTabs extends StatefulWidget {
 }
 
 class _HomeTabsState extends State<HomeTabs> {
-  late Future<List<dynamic>> movies;
-
-  @override
-  void initState() {
-    super.initState();
-    movies = apiManager().fetchMovies();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,20 +32,7 @@ class _HomeTabsState extends State<HomeTabs> {
                       Center(
                           child:
                               Image.asset('assets/images/Available Now.png')),
-                      FutureBuilder<List<dynamic>>(
-                          future: movies,
-                          builder: (context, snapshot) {
-                            if (snapshot.hasError) {
-                              return Center(
-                                  child: Text(snapshot.error.toString()));
-                            } else if (snapshot.hasData) {
-                              return TrendingSilder();
-                            } else {
-                              return Center(
-                                child: CircularProgressIndicator(),
-                              );
-                            }
-                          }),
+                      TrendingSilder(),
                       Center(child: Image.asset('assets/images/Watch Now.png')),
                       SizedBox(
                         height: 3,
@@ -74,51 +55,56 @@ class _HomeTabsState extends State<HomeTabs> {
                           ),
                         ],
                       ),
-                      MoviesSlider(),
+                      FutureBuilder<GeneraResponse?>(
+                          future: ApiManagers.getGenera(),
+                          builder: (context, snapshot) {
+                            if (snapshot.connectionState ==
+                                ConnectionState.waiting) {
+                              return Center(
+                                child: CircularProgressIndicator(
+                                  color: Colors.grey,
+                                ),
+                              );
+                            } else if (snapshot.hasError) {
+                              return Column(
+                                children: [
+                                  Text(
+                                    'someThing went wrong',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  ElevatedButton(
+                                      onPressed: () {
+                                        ApiManagers.getGenera();
+                                        setState(() {});
+                                      },
+                                      child: Text(
+                                        'try again',
+                                        style: TextStyle(color: Colors.red),
+                                      )),
+                                ],
+                              );
+                            }
+                            if (snapshot.data!.status != 'ok') {
+                              return Column(
+                                children: [
+                                  Text(snapshot.data!.message!),
+                                  ElevatedButton(
+                                      onPressed: () {
+                                        ApiManagers.getGenera();
+                                        setState(() {});
+                                      },
+                                      child: Text(
+                                        'try again',
+                                        style: TextStyle(color: Colors.red),
+                                      )),
+                                ],
+                              );
+                            }
+                            return MoviesSlider();
+                          }),
                       SizedBox(
                         height: 5,
                       ),
-                      Row(
-                        children: [
-                          Text(
-                            '  Adventure',
-                            style: TextStyle(color: AppColors.whiteColor),
-                          ),
-                          Spacer(),
-                          Text(
-                            '  See More',
-                            style: TextStyle(color: AppColors.YellowColor),
-                          ),
-                          Icon(
-                            Icons.arrow_forward,
-                            color: AppColors.YellowColor,
-                            size: 14,
-                          ),
-                        ],
-                      ),
-                      MoviesSlider(),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            '  Animation',
-                            style: TextStyle(color: AppColors.whiteColor),
-                          ),
-                          Spacer(),
-                          Text(
-                            '  See More',
-                            style: TextStyle(color: AppColors.YellowColor),
-                          ),
-                          Icon(
-                            Icons.arrow_forward,
-                            color: AppColors.YellowColor,
-                            size: 14,
-                          ),
-                        ],
-                      ),
-                      MoviesSlider(),
                     ],
                   ),
                 ),

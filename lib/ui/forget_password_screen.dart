@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies/Utils/AppColor.dart';
 import 'package:movies/ui/login_Screen.dart';
 import 'package:movies/ui/widget/custom_Elevated_Button.dart';
 
@@ -58,6 +59,8 @@ class ForgetPasswordScreen extends StatelessWidget {
               ],
             ),
           ),*/
+
+CustomElevatedButton(text: 'Verify Email',colored: AppColors.YellowColor, textStyle: AppColors.blackColor,)
         ],
       ),
     );

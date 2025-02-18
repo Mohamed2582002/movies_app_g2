@@ -8,11 +8,13 @@ import 'package:movies/onboardingScreen/introduction2.dart';
 import 'package:movies/onboardingScreen/introduction4.dart';
 import 'package:movies/onboardingScreen/introduction5.dart';
 import 'package:movies/onboardingScreen/introduction6.dart';
+import 'package:movies/ui/browse_screen/browse_screen.dart';
 import 'package:movies/ui/details_screen/cast_details.dart';
 import 'package:movies/ui/details_screen/similar_Movies.dart';
 import 'package:movies/ui/login_Screen.dart';
 import 'package:movies/ui/movie_details/details1.dart';
 import 'package:movies/ui/profile/update_profile.dart';
+import 'package:movies/ui/search_screen/searchScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: CastDetails.routeName,
+      initialRoute: SearchScreen.routeName,
       routes: {
         LoginScreen.routeName: (context) => LoginScreen(),
         UpdateProfile.routeName: (context) => UpdateProfile(),
@@ -41,9 +43,11 @@ class MyApp extends StatelessWidget {
         CastDetails.routeName: (context) => CastDetails(),
         SimilarMovies.routeName: (context) => SimilarMovies(),
         Details1.routeName: (context) => Details1(),
-      }
-      ,darkTheme:MyThemeData.darkTheme,
-      themeMode:ThemeMode.light ,
-      );
+        BrowseScreen.routeName: (context) => BrowseScreen(),
+        SearchScreen.routeName: (context) => SearchScreen(),
+      },
+      darkTheme: MyThemeData.darkTheme,
+      themeMode: ThemeMode.light,
+    );
   }
 }

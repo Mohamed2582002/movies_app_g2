@@ -1,0 +1,2 @@
+C:/Users/Lap/OneDrive/Desktop/New folder/movies_app_g2/android/app/.cxx/Debug/16596412/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/Lap/OneDrive/Desktop/New folder/movies_app_g2/android/app/.cxx/Debug/16596412/arm64-v8a/CMakeFiles/rebuild_cache.dir

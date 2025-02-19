@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../Utils/AppColor.dart';
 
-
 typedef MyValidator = String? Function(String?)? ;
 
 class CustomTextField extends StatelessWidget {
@@ -16,11 +15,15 @@ class CustomTextField extends StatelessWidget {
   Widget? suffixIcon ;
   bool obscureText ;
   int? maxLines ;
-  MyValidator validator ; //Add a TextFormField with validation logic
+
+  String? Function(String?)? validator;
+
+  //Add a TextFormField with validation logic
   TextEditingController? controller ;
   TextInputType? keyboardType ;
 
   CustomTextField({
+    this.validator,
     this.color,
     this.keyboardType= TextInputType.text,
     this.borderColor,
@@ -32,7 +35,6 @@ class CustomTextField extends StatelessWidget {
     this.suffixIcon,
     this.obscureText =false ,
     this.maxLines,
-    this.validator ,
     this.controller ,
 
   });
@@ -40,9 +42,10 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      cursorColor: AppColors.whiteColor,
       style: TextStyle(color: AppColors.whiteColor),
+      validator: validator,
       keyboardType: keyboardType,
-      validator: validator, // Add a TextFormField with validation logic
       controller: controller,
       maxLines: maxLines ?? 1,
       obscureText: obscureText,
@@ -51,41 +54,37 @@ class CustomTextField extends StatelessWidget {
           filled: true,
           fillColor: AppColors.greyColor,
           focusColor: AppColors.greyColor,
-          hintText: hintText ,
-
-          labelText: labelText ,
-          hintStyle:  hintStyle?? TextStyle(fontSize: 16,color: AppColors.whiteColor) ,
-          labelStyle: labelStyle?? TextStyle(fontSize: 16,color: AppColors.whiteColor) ,
+          hintText: hintText,
+          labelText: labelText,
+          hintStyle:
+              hintStyle ?? TextStyle(fontSize: 16, color: AppColors.whiteColor),
+          labelStyle: labelStyle ??
+              TextStyle(fontSize: 16, color: AppColors.whiteColor),
           prefixIcon: preFixIcon,
           suffixIcon: suffixIcon,
-
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
               borderSide: BorderSide(
                 color: borderColor ?? AppColors.transparentColor,
                 width: 2,
-              )
-          ),
-          errorBorder:  OutlineInputBorder(
+              )),
+          errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
               borderSide: BorderSide(
                 color: borderColor ?? AppColors.redColor,
-                width: 2,
-              )
-          ),
-          focusedErrorBorder:  OutlineInputBorder(
+                width: 1,
+              )),
+          focusedErrorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
               borderSide: BorderSide(
                 color: borderColor ?? AppColors.greyColor,
                 width: 2,
-              )
-          ),
+              )),
           focusedBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: AppColors.greyColor, width: 2.0),
+            borderSide:
+                const BorderSide(color: AppColors.greyColor, width: 2.0),
             borderRadius: BorderRadius.circular(16),
-          )
-
-      ),
+          )),
     );
   }
 }

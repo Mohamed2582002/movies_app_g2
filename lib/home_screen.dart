@@ -3,7 +3,7 @@ import 'package:movies/Utils/AppAssets.dart';
 import 'package:movies/Utils/AppColor.dart';
 import 'package:movies/bottomNavigationBar/Browse/Browse.dart';
 import 'package:movies/bottomNavigationBar/Profile/Profile.dart';
-import 'package:movies/bottomNavigationBar/home/home.dart';
+import 'package:movies/bottomNavigationBar/home/home_tabs.dart';
 import 'package:movies/bottomNavigationBar/serch/search.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
 
   List<Widget> tabs = [
-    Home(),
+    HomeTabs(),
     Search(),
     Browse(),
     Profile(),

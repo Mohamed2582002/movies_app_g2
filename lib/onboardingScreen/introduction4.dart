@@ -5,7 +5,7 @@ import 'package:movies/Utils/AppStyle.dart';
 import 'package:movies/onboardingScreen/intrduction3.dart';
 import 'package:movies/onboardingScreen/introduction5.dart';
 
-class Intrduction4 extends StatelessWidget {
+class Introduction4 extends StatelessWidget {
   static const String routeName = "introduction4";
 
   @override
@@ -70,7 +70,7 @@ class Intrduction4 extends StatelessWidget {
                   ElevatedButton(
                       onPressed: () {
                         Navigator.pushReplacementNamed(
-                            context, Intrduction3.routeName);
+                            context, Introduction3.routeName);
                       },
                       style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.blackColor,

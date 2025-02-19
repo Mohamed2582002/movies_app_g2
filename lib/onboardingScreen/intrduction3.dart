@@ -5,12 +5,13 @@ import 'package:movies/Utils/AppStyle.dart';
 import 'package:movies/onboardingScreen/introduction2.dart';
 import 'package:movies/onboardingScreen/introduction4.dart';
 
-class Intrduction3 extends StatelessWidget {
+class Introduction3 extends StatelessWidget {
   static const String routeName = "introduction3";
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Scaffold(
+      body: Stack(
         children: [
           Image.asset(
             AppAssets.introduction3,
@@ -52,7 +53,7 @@ class Intrduction3 extends StatelessWidget {
                     ElevatedButton(
                         onPressed: () {
                           Navigator.pushReplacementNamed(
-                              context, Intrduction4.routeName);
+                              context, Introduction4.routeName);
                         },
                         style: ElevatedButton.styleFrom(
                             backgroundColor: AppColors.YellowColor,
@@ -88,7 +89,7 @@ class Intrduction3 extends StatelessWidget {
                 ),
               ))
         ],
-
-      );
+      ),
+    );
   }
 }

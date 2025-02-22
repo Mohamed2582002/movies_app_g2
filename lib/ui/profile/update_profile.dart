@@ -111,12 +111,7 @@ class _UpdateProfileState extends State<UpdateProfile> {
 
                   ))
 
-              CustomElevatedButton(
-                text: 'Update Data',
-                colored: AppColors.YellowColor,
-                textStyle: AppColors.blackColor,
-                onPressed: () {},
-              )
+
             ],
           ),
         ),

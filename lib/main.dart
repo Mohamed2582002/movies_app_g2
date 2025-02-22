@@ -41,23 +41,8 @@ class MyApp extends StatelessWidget {
       ,darkTheme:MyThemeData.darkTheme,
       themeMode:ThemeMode.light ,
       );
-        LoginScreen.routeName: (context) => LoginScreen(),
-        UpdateProfile.routeName: (context) => UpdateProfile(),
-        RegisterScreen.routeName: (context) => RegisterScreen(),
-        Introduction1.routeName: (context) => Introduction1(),
-        Introduction2.routeName: (context) => Introduction2(),
-        Introduction3.routeName: (context) => Introduction3(),
-        Introduction4.routeName: (context) => Introduction4(),
-        Introduction5.routeName: (context) => Introduction5(),
-        Introduction6.routeName: (context) => Introduction6(),
-        HomeScreen.routeName: (context) => HomeScreen(),
-        CastDetails.routeName: (context) => CastDetails(),
-        SimilarMovies.routeName: (context) => SimilarMovies(),
-        Details1.routeName: (context) => Details1(),
-      },
-      darkTheme: MyThemeData.darkTheme,
-      themeMode: ThemeMode.light,
-    );
+
+
 
   }
 }

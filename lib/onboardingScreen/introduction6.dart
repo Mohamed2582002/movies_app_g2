@@ -3,8 +3,10 @@ import 'package:movies/Utils/AppAssets.dart';
 import 'package:movies/Utils/AppColor.dart';
 import 'package:movies/Utils/AppStyle.dart';
 import 'package:movies/onboardingScreen/introduction5.dart';
+
 import '../ui/login_Screen.dart';
-class Intrduction6 extends StatelessWidget {
+
+class Introduction6 extends StatelessWidget {
   static const String routeName = "introduction6";
 
   @override

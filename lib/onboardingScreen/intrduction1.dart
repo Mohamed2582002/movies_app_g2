@@ -4,7 +4,7 @@ import 'package:movies/Utils/AppColor.dart';
 import 'package:movies/Utils/AppStyle.dart';
 import 'package:movies/onboardingScreen/introduction2.dart';
 
-class introduction1 extends StatelessWidget {
+class Introduction1 extends StatelessWidget {
   static const String routeName = "introduction1";
 
   @override

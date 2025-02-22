@@ -227,6 +227,7 @@
 import 'package:flutter/material.dart';
 import 'package:movies/Utils/AppAssets.dart';
 import 'package:movies/Utils/AppColor.dart';
+import 'package:movies/home_screen.dart';
 import 'package:movies/ui/forget_password_screen.dart';
 import 'package:movies/ui/widget/custom_Elevated_Button.dart';
 import 'package:movies/ui/widget/custom_Text_Field.dart';
@@ -284,7 +285,10 @@ class LoginScreen extends StatelessWidget {
                 CustomElevatedButton(
                   text: 'Login',
                   colored: AppColors.YellowColor,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(
+                        context, HomeScreen.routeName);
+                  },
                 ),
                 SizedBox(height: height * 0.02,),
                 InkWell(

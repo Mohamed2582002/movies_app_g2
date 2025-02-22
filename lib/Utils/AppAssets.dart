@@ -34,6 +34,12 @@ class AppAssets{
   static const String screenShot2 = "assets/images/screen_shot2.png";
   static const String screenShot3 = "assets/images/screen_shot3.png";
   static const String heartIcon = "assets/images/heart_icon.png";
+  static const String watchListIcon = "assets/images/watch_list_icon.png";
+  static const String folderIcon = "assets/images/folder_icon.png";
+  static const String popCorn = "assets/images/popcorn.png";
+
+
+
 
 
 

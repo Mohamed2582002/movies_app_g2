@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:movies/Utils/AppAssets.dart';
 import 'package:movies/Utils/AppColor.dart';
+import 'package:movies/bottomNavigationBar/Profile/Profile.dart';
+import 'package:movies/home_screen.dart';
 import 'package:movies/ui/profile/pick_avatar.dart';
 import 'package:movies/ui/widget/custom_Elevated_Button.dart';
 import 'package:movies/ui/widget/custom_Text_Field.dart';
@@ -16,13 +18,17 @@ class UpdateProfile extends StatefulWidget {
 class _UpdateProfileState extends State<UpdateProfile> {
   @override
   Widget build(BuildContext context) {
+    var width =MediaQuery.of(context).size.width;
+    var height =MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Color(0xFF121312),
       appBar: AppBar(
         backgroundColor: Color(0xFF121312),
         title: Text('Pick Avatar',style: TextStyle(color: Color(0xFFFFBB3B)),),
         centerTitle: true,
-        leading: IconButton(onPressed: (){},
+        leading: IconButton(onPressed: (){
+          Navigator.of(context).pushNamed(HomeScreen.routeName);
+        },
             icon: Icon(
               Icons.arrow_back,color:AppColors.YellowColor ,)),
       ),
@@ -76,7 +82,28 @@ class _UpdateProfileState extends State<UpdateProfile> {
               SizedBox(
                 height: 20,
               ),
-              CustomElevatedButton(text: 'Update Data', colored: AppColors.YellowColor,textStyle: AppColors.blackColor,)
+              ElevatedButton(style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.YellowColor,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  padding: EdgeInsets.symmetric(
+                    vertical: height * 0.015,
+                    horizontal: width * 0.02,
+                  )
+              ), onPressed:(){
+                Navigator.of(context).pushNamed(HomeScreen.routeName);
+              } ,
+                  child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Update Data', style: TextStyle(color: AppColors.blackColor, fontSize: 16
+                            , fontWeight: FontWeight.w400
+                        ),
+
+                        ),
+                      ]
+
+                  ))
             ],
           ),
         ),

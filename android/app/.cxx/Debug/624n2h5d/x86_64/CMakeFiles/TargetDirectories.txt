@@ -1,0 +1,2 @@
+E:/Route-Alex3/movies_app_g2/android/app/.cxx/Debug/624n2h5d/x86_64/CMakeFiles/edit_cache.dir
+E:/Route-Alex3/movies_app_g2/android/app/.cxx/Debug/624n2h5d/x86_64/CMakeFiles/rebuild_cache.dir

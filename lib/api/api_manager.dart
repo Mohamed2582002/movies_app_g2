@@ -10,7 +10,7 @@ import 'package:movies/models/genera_response.dart';
 class ApiManagers {
   static Future<GeneraResponse?> getGenera() async {
     Uri url = Uri.https(ApiConstants.baseUrl, endPoints.generaApi,
-        {'genre': ApiConstants.genera});
+    );
     try {
       var response = await http.get(url);
       var responseBody = response.body;
